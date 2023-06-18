@@ -31,12 +31,12 @@ public class Main {
     }
 
 
-    private static void parseXMLToJSON() {
+    public static void parseXMLToJSON() {
         List<Employee> list = parseXML("data.xml");
         writeString(listToJson(list), "data2.json");
     }
 
-    private static List<Employee> parseXML(String s) {
+    public static List<Employee> parseXML(String s) {
         List<Employee> staff = new ArrayList<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
@@ -66,7 +66,7 @@ public class Main {
         return staff;
     }
 
-    private static void parseCSVToJSON() {
+    public static void parseCSVToJSON() {
         String[] columnMapping = {"id", "firstName", "lastName", "country", "age"};
         String fileName = "data.csv";
         List<Employee> list = parseCSV(columnMapping, fileName);
