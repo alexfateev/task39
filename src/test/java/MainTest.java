@@ -1,4 +1,3 @@
-import org.apache.commons.lang3.builder.ToStringExclude;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,7 +5,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.File;
 
-public class MainTests {
+public class MainTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"data.csv", "data.xml"})
@@ -38,4 +37,9 @@ public class MainTests {
         boolean result = file.exists();
         Assertions.assertEquals(expected, result);
     }
+
+//    @Test
+//    public void test() {
+//        Assertions.assertTrue(false);
+//    }
 }
